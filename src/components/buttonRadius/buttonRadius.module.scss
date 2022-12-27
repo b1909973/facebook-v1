@@ -1,0 +1,13 @@
+.wrapper{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: var(--background-button-radius);
+    color: white;
+    border: none;
+    margin-right: 8px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(124, 123, 123);
+    }
+}

@@ -6,6 +6,7 @@
     --black: #000;
     --white: #fff;
     --text-color: #333;
+    --background-button-radius: #3A3B3C;
 }
 
 * {
@@ -13,7 +14,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 
 .grid {
@@ -42,6 +42,9 @@
 }
 .justify-content-center{
     justify-content: center;
+}
+.justify-content-end{
+    justify-content: flex-end;
 }
 .row.no-gutters {
     margin-left: 0;
