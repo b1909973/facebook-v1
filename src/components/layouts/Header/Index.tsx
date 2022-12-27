@@ -1,11 +1,22 @@
 import classNames from "classnames/bind";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHomeUser,faTv,faStore,faUsers,faGamepad } from "@fortawesome/free-solid-svg-icons";
+import {useState} from 'react'
 
 import styles from './Header.module.scss'
 import IconNav from "./components/IconNav";
 const cx = classNames.bind(styles)
-function Header():JSX.Element {
+const listNav:JSX.Element[] =[
+        <FontAwesomeIcon  icon={faHomeUser} />,
+        <FontAwesomeIcon icon={faTv}/>,
+        <FontAwesomeIcon icon={faStore}/>,
+        <FontAwesomeIcon icon={faUsers} />,
+        <FontAwesomeIcon icon={faGamepad}/>
+]
+
+function Header():JSX.Element { 
+        const [active,setActive] = useState(0)
+        console.log('re-render')
     return (
     <div className={cx('grid','row','wrapper')}>
         <div className={cx('c-4')}>
@@ -15,11 +26,11 @@ function Header():JSX.Element {
         {/* iconNav */}
         <div className={cx('c-4','iconNav')}>
                 <ul className={cx("iconNav-list",'justify-content-center','row','align-content-center')}>
-                <IconNav icon={  <FontAwesomeIcon  icon={faHomeUser} />} />
-                <IconNav icon={<FontAwesomeIcon icon={faTv}/>}/>
-                <IconNav icon={<FontAwesomeIcon icon={faStore}/>}/>
-                <IconNav icon={<FontAwesomeIcon icon={faUsers} />}/>
-                <IconNav icon={<FontAwesomeIcon icon={faGamepad}/>}/>
+                {listNav.map((icon,i)=>    <IconNav icon={ icon} key={i}  className={active===i} onClick={():void=>{setActive(i)}}/>
+                
+                )}
+             
+               
 
                 </ul>
 

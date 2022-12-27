@@ -9,4 +9,12 @@
     &:hover{
         background-color: rgb(124, 116, 116);
     }
+   
+}
+.active{
+    border-bottom: 2px solid blue;
+    &:hover {
+        background-color: #242526
+        
+      }
 }
