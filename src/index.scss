@@ -7,6 +7,7 @@
     --white: #fff;
     --text-color: #333;
     --background-button-radius: #3A3B3C;
+        --web-wash: #18191A;
 }
 
 * {
@@ -14,8 +15,13 @@
     margin: 0;
     padding: 0;
 }
+a{
+    color: white    ;
+}
+body{
+    color: white;
 
-
+}
 .grid {
     width: 100%;
     display: block;
@@ -29,7 +35,6 @@
 
 .row {
     display: flex;
-    flex-wrap: wrap;
 //     margin-left: -4px;
 //     margin-right: -4px;
 // }
@@ -37,8 +42,14 @@
 .align-content-center{
     align-content: center;
 }
+.align-items-center{
+    align-items: center;
+}
 .justify-content-between{
     justify-content: space-between;
+}
+.justify-content-around{
+    justify-content: space-around;
 }
 .justify-content-center{
     justify-content: center;
